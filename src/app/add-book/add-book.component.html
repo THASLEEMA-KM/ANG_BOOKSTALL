@@ -1,0 +1,42 @@
+<div class="container-fluid mt-3 homediv">
+    <h1 class="text-center mt-5 mb-3 fw-bolder text-primary">Add book Here</h1>
+    <div class="row container-fluid p-5 d-flex">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 border rounded p-3">
+            <form action="" #addBookForm="ngForm">
+                <input type="text" name="id" #bookId="ngModel" [(ngModel)]="books.id" placeholder="Enter Book number" class="form-control mb-3" required pattern="[a-zA-Z0-9 ]*">
+                <div *ngIf="bookId.touched && bookId.invalid" class="text-danger fw-bolder mb-3 ms-3">**Invalid ID</div>
+
+                <input type="text" name="image" #bookUrl="ngModel" [(ngModel)]="books.image" placeholder="Enter BooK image URL" class="form-control mb-3" required >
+                <div *ngIf="bookUrl.touched && bookUrl.invalid" class="text-danger fw-bolder mb-3 ms-3">**Inavlid URL</div>
+
+                <input type="text" name="name" #bookName="ngModel" [(ngModel)]="books.name" placeholder="Enter book name" class="form-control mb-3" required pattern="[a-zA-Z0-9 ]*">
+                <div *ngIf="bookName.touched && bookName.invalid" class="text-danger fw-bolder mb-3 ms-3">**Enter book Name</div>
+
+                <input type="text" name="author" #bookAuthor="ngModel" [(ngModel)]="books.author" placeholder="Enter Author name" class="form-control mb-3" required pattern="[a-zA-Z0-9 ]*">
+                <div *ngIf="bookAuthor.touched && bookAuthor.invalid" class="text-danger fw-bolder mb-3 ms-3">**Enter Author Name</div>
+
+                <input type="text" name="price" #bookPrice="ngModel" [(ngModel)]="books.price" placeholder="Enter Price" class="form-control mb-3" required pattern="[0-9 ]*">
+                <div *ngIf="bookPrice.touched && bookPrice.invalid" class="text-danger fw-bolder mb-3 ms-3">**Enter Price</div>
+
+                <input type="text" name="language" #bookLang="ngModel" [(ngModel)]="books.language" placeholder="Enter Language" class="form-control mb-3" required pattern="[a-zA-Z]*">
+                <div *ngIf="bookLang.touched && bookLang.invalid" class="text-danger fw-bolder mb-3 ms-3">**Enter Language</div>
+
+                <input type="text" name="genre" #bookType="ngModel" [(ngModel)]="books.genre" placeholder="Enter type of book" class="form-control mb-3" required pattern="[a-zA-Z0-9 ]*">
+                <div *ngIf="bookType.touched && bookType.invalid" class="text-danger fw-bolder mb-3 ms-3">**Enter Book type</div>
+
+                <input type="date" name="pubDate" #bookPubDate="ngModel" [(ngModel)]="books.pubDate" placeholder="Enter Date" class="form-control mb-3" required >
+                <div *ngIf="bookPubDate.touched && bookPubDate.invalid" class="text-danger fw-bolder mb-3 ms-3">**Enter Published Date</div>
+
+                <textarea name="description" #bookDesc="ngModel" [(ngModel)]="books.description" placeholder="Enter Book Details" class="form-control mb-3" required ></textarea>
+                <div *ngIf="bookDesc.touched && bookDesc.invalid" class="text-danger fw-bolder mb-3 ms-3">**Enter Book Details</div>
+
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-success" (click)="add()" [disabled]="addBookForm.invalid">ADD</button>
+                    <button class="btn btn-warning ms-2" (click)="cancel()">CANCEL</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>

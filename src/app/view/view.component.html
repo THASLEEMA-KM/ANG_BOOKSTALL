@@ -1,0 +1,28 @@
+<div class="container-fluid mt-5">
+    <h1 class="text-center fw-bolder text-success mb-4 bookTitle" >{{books.name}}</h1>
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <div class="row container-fluid d-flex justify-content-between">
+                <div class="col-lg-5">
+                    <img [src]="books.image" alt="bookimage" class="rounded-5" width="100%" height="500px">
+                </div>
+                <div class="col-lg-7 mt-2">
+                    <h5 style="font-weight: bolder; font-size: 20px;">Book ID : <span style="font-size: 25px; font-weight: lighter;">{{books.id}}</span> </h5>
+                    <h5 style="font-weight: bolder; font-size: 20px;">Book Name : <span class="bookViewDetails">{{books.name}}</span></h5> 
+                    <h5 style="font-weight: bolder; font-size: 20px;">Author : <span class="bookViewDetails">{{books.author}}</span></h5> 
+                    <h5 style="font-weight: bolder; font-size: 20px;">Published Date : <span class="bookViewDetails">{{books.pubDate}}</span></h5> 
+                    <h5 style="font-weight: bolder; font-size: 20px;">Language : <span class="bookViewDetails">{{books.language}} </span></h5> 
+                    <h5 style="font-weight: bolder; font-size: 20px;">Genre : <span class="bookViewDetails">{{books.genre}} </span></h5>
+                    <h5 style="font-weight: bolder; font-size: 20px;">Price : <span class="bookViewDetails"> ₹ {{books.price}}</span> </h5>
+                    <span style="font-weight: bolder; font-size: 20px;">Description : </span> <p style="font-size: 20px; text-align: justify;" class="bookViewDetails">{{books.description}}</p>
+                    <div class="mt-3 d-flex justify-content-between">
+                        <button class="btn btn-primary" (click)="subscribe()">Subscribe to Read More</button>
+                        <button class="btn btn-warning" (click)="backHome()">Home</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>

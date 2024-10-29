@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "DM Serif Text", serif;
+}
+.navbar-brand{
+    font-family: "DynaPuff", system-ui;
+}
+.dashboarddiv{
+    /* background-color: aliceblue; */
+    min-height: 100vh;
+    background-image: url("https://cdn.pixabay.com/photo/2018/01/30/10/23/women-3118387_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.homediv{
+    /* background-color: rgba(121, 114, 114, 0.379); */
+    min-height: 100vh;
+    background-image: url("https://cdn.pixabay.com/photo/2018/01/30/10/23/women-3118387_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.dashboardContent{
+    color: black;
+    text-align: justify;
+    font-size: 18px;
+    font-family: "Lora", serif;
+}
+.bookdetails{
+    font-family: "Lora", serif;
+    font-size: 18px;
+}
+ .bookViewDetails{
+    font-size: 22px;
+    font-weight: lighter;
+    text-transform: capitalize;
+    font-family: "Lora", serif;
+ }
+ .bookTitle{
+    letter-spacing: 2px;
+    font-family: "Updock", cursive;
+ }
