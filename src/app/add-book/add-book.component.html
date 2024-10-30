@@ -22,13 +22,13 @@
                 <input type="text" name="language" #bookLang="ngModel" [(ngModel)]="books.language" placeholder="Enter Language" class="form-control mb-3" required pattern="[a-zA-Z]*">
                 <div *ngIf="bookLang.touched && bookLang.invalid" class="text-danger fw-bolder mb-3 ms-3">**Enter Language</div>
 
-                <input type="text" name="genre" #bookType="ngModel" [(ngModel)]="books.genre" placeholder="Enter type of book" class="form-control mb-3" required pattern="[a-zA-Z0-9 ]*">
+                <input type="text" name="genre" #bookType="ngModel" [(ngModel)]="books.genre" placeholder="Enter type of book" class="form-control mb-3" required pattern="^[a-zA-Z0-9]+(,[a-zA-Z0-9 ]+)*$">
                 <div *ngIf="bookType.touched && bookType.invalid" class="text-danger fw-bolder mb-3 ms-3">**Enter Book type</div>
 
                 <input type="date" name="pubDate" #bookPubDate="ngModel" [(ngModel)]="books.pubDate" placeholder="Enter Date" class="form-control mb-3" required >
                 <div *ngIf="bookPubDate.touched && bookPubDate.invalid" class="text-danger fw-bolder mb-3 ms-3">**Enter Published Date</div>
 
-                <textarea name="description" #bookDesc="ngModel" [(ngModel)]="books.description" placeholder="Enter Book Details" class="form-control mb-3" required ></textarea>
+                <textarea name="description" #bookDesc="ngModel" rows="5" cols="8" [(ngModel)]="books.description" placeholder="Enter Book Details" class="form-control mb-3" required ></textarea>
                 <div *ngIf="bookDesc.touched && bookDesc.invalid" class="text-danger fw-bolder mb-3 ms-3">**Enter Book Details</div>
 
                 <div class="d-flex justify-content-center">
