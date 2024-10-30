@@ -5,7 +5,18 @@
     font-family: "DM Serif Text", serif;
 }
 .navbar-brand{
-    font-family: "DynaPuff", system-ui;
+    /* font-family: "DynaPuff", system-ui; */
+    font-family: "Merriweather", serif;
+    align-items: center;
+    font-size: 23px;
+    
+
+}
+.navbar-brand img{
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
 }
 .dashboarddiv{
     /* background-color: aliceblue; */
